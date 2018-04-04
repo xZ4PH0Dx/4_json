@@ -5,7 +5,7 @@ This program will pretty print your flat json file.
 # Quickstart
 
 You should pass a file path as an argument.
-If you don't have a json file you can download it from [DEVMAN.org] (https://devman.org/fshare/1502828617/1/)
+If you don't have a json file you can download it from [DEVMAN.org](https://devman.org/fshare/1502828617/1/)
 
 Example of script launch on Linux, Python 3.5:
 
