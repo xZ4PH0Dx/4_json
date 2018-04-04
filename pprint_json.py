@@ -9,8 +9,13 @@ def load_data(filepath):
         return json.loads(file.read())
 
 
-def pretty_print_json(not_pretty_json):
-    return json.dumps(not_pretty_json, indent=4, sort_keys=True, ensure_ascii=False)
+def prettify_json(not_pretty_data):
+    return json.dumps(
+        not_pretty_data,
+        indent=4,
+        sort_keys=True,
+        ensure_ascii=False
+    )
 
 
 if __name__ == '__main__':
@@ -20,8 +25,8 @@ if __name__ == '__main__':
     filepath = sys.argv[1]
 
     try:
-        loaded_json = (load_data(filepath))
+        loaded_shops = load_data(filepath)
     except (OSError, JSONDecodeError):
         sys.exit('Файл отсутствует или это не json')
 
-    print(pretty_print_json(loaded_json))
+    print(prettify_json(loaded_shops))
